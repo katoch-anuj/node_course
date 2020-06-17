@@ -12,7 +12,7 @@ const msg2 = document.querySelector("#message2");
  	event.preventDefault();
  	const address=search.value
 
- 	fetch("http://localhost:3000/weather?address="+address).then(response=>{
+ 	fetch("/weather?address="+address).then(response=>{
 		response.json().then(data=>{
 		if(data.error){
 			msg1.textContent=data.error;
